@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Name Joiner</title>
+</head>
+<body>
+    <h2>Enter your name which to be joined</h2>
+    <form id="nameForm">
+        <label for="firstName">First Name:</label><br>
+        <input type="text" id="firstName" name="firstName"><br>
+        <label for="lastName">Last Name:</label><br>
+        <input type="text" id="lastName" name="lastName"><br><br>
+        <input type="button" value="submit" onclick="joinNames()">
+    </form>
+    
+    <div id="result"></div>
+
+    <script>
+        function joinNames() {
+            
+            const firstName = document.getElementById("firstName").value;
+            const lastName = document.getElementById("lastName").value;
+
+           
+            const fullName = `<strong>${firstName}</strong> <em>${lastName}</em>`;
+
+            
+            document.getElementById("result").innerHTML = `Joined Name: ${fullName}`;
+        }
+    </script>
+</body>
+</html>
